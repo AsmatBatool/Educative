@@ -1,0 +1,51 @@
+<div class="container-fluid" style="align-items: center;padding-left: 300px;">
+  <h1>Compile Service</h1>
+  <hr/>
+  <div class="container-fluid" style="padding: 20px;">
+    <table class="table-bordered">
+      <tr>
+        <td>
+          <div id="attachHere"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Your Wish: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="name"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          My Command: <input type="text" ng-model="element"/> <br/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn btn-success" ng-click="attachDiv(element)">Attach</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="localeController" style="align-items: center;padding-left: 300px;">
+  <h1>Locale Demo</h1>
+  <hr/>
+  Price:- {{price | currency}}
+  Time:- {{date | date:'fullDate' }}
+  <div class="container-fluid" style="padding: 20px;">
+    <table class="table-bordered">
+
+    </table>
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="filterController" style="align-items: center;padding-left: 300px;">
+  <h1>Filter Demo</h1>
+  <hr/>
+  <ul>
+    <li>{{show.first}}</li>
+    <li>{{show.second}}</li>
+    <li>{{show.third}}</li>
+  </ul>
+  </div>
+</div>

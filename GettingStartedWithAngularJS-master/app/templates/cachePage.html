@@ -1,0 +1,46 @@
+
+<div class="container-fluid">
+  <h1>Cache Demo</h1>
+  <hr/>
+  <div class="container-fluid" style="padding: 20px;">
+    <table class="table-bordered">
+      <tr>
+        <td>
+          Key: <input type="text" ng-model="key"/> <br/>
+        </td>
+        <td>
+          value: <input type="text" ng-model="value"/> <br/>
+        </td>
+        <td>
+          <button type="button" class="btn btn-success" ng-click="putInCache(key,value)">Add To Cache</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+         Key: <input type="text" ng-model="keyToRead"/><br/>
+        </td>
+        <td>
+          <h3>Value From Cache: {{readFromCache(keyToRead)}}</h3>
+        </td>
+      </tr>
+      <tr>
+        <td> Key: <input type="text" ng-model="key"/>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" ng-click="deleteFromCache(key)">Delete From Cache</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+      <button type="button" class="btn btn-danger" ng-click="flushCache()">Flush Cache</button>
+        </td>
+
+      </tr>
+      <tr>
+        <td><h3>Cache Size: {{currentCapacity()}}</h3></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
